@@ -17,6 +17,7 @@
 		048C1A6D19BD60B400D2469A /* Question.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048C1A6519BD60B400D2469A /* Question.cpp */; };
 		048C1A6E19BD60B400D2469A /* ScoreKeeper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048C1A6719BD60B400D2469A /* ScoreKeeper.cpp */; };
 		048C1A6F19BD60B400D2469A /* CardGameZipReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048C1A6919BD60B400D2469A /* CardGameZipReader.cpp */; };
+		7BAC51C819CBAFE100120FA6 /* Timekeeper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC51C619CBAFE100120FA6 /* Timekeeper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,6 +131,8 @@
 		048C1A6819BD60B400D2469A /* ScoreKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
 		048C1A6919BD60B400D2469A /* CardGameZipReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardGameZipReader.cpp; sourceTree = "<group>"; };
 		048C1A6A19BD60B400D2469A /* CardGameZipReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameZipReader.h; sourceTree = "<group>"; };
+		7BAC51C619CBAFE100120FA6 /* Timekeeper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timekeeper.cpp; sourceTree = "<group>"; };
+		7BAC51C719CBAFE100120FA6 /* Timekeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timekeeper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +346,8 @@
 		048C1A5319BD603700D2469A /* CardObjectsProject2 */ = {
 			isa = PBXGroup;
 			children = (
+				7BAC51C619CBAFE100120FA6 /* Timekeeper.cpp */,
+				7BAC51C719CBAFE100120FA6 /* Timekeeper.h */,
 				048C1A5F19BD60B400D2469A /* hotness_people.zip */,
 				048C1A6019BD60B400D2469A /* csf_meningitis.zip */,
 				048C1A6119BD60B400D2469A /* BigObject.cpp */,
@@ -415,6 +420,7 @@
 				048C1A5519BD603700D2469A /* main.cpp in Sources */,
 				048C1A6E19BD60B400D2469A /* ScoreKeeper.cpp in Sources */,
 				048C1A6D19BD60B400D2469A /* Question.cpp in Sources */,
+				7BAC51C819CBAFE100120FA6 /* Timekeeper.cpp in Sources */,
 				048C1A6C19BD60B400D2469A /* QuestionFinder.cpp in Sources */,
 				048C1A6F19BD60B400D2469A /* CardGameZipReader.cpp in Sources */,
 				048C1A6B19BD60B400D2469A /* BigObject.cpp in Sources */,
