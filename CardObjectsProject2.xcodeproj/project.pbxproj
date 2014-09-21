@@ -20,6 +20,23 @@
 		7BAC51C819CBAFE100120FA6 /* Timekeeper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC51C619CBAFE100120FA6 /* Timekeeper.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7B5F1FFF19CF5D0D005B3175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5F1FFA19CF5D0C005B3175 /* CardGame.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B5F1FCE19CF5D0C005B3175;
+			remoteInfo = CardGame;
+		};
+		7B5F200119CF5D0D005B3175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5F1FFA19CF5D0C005B3175 /* CardGame.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B5F1FEA19CF5D0C005B3175;
+			remoteInfo = CardGameTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		048C1A4F19BD603700D2469A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -131,6 +148,7 @@
 		048C1A6819BD60B400D2469A /* ScoreKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
 		048C1A6919BD60B400D2469A /* CardGameZipReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardGameZipReader.cpp; sourceTree = "<group>"; };
 		048C1A6A19BD60B400D2469A /* CardGameZipReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameZipReader.h; sourceTree = "<group>"; };
+		7B5F1FFA19CF5D0C005B3175 /* CardGame.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CardGame.xcodeproj; path = CardGame/CardGame.xcodeproj; sourceTree = "<group>"; };
 		7BAC51C619CBAFE100120FA6 /* Timekeeper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timekeeper.cpp; sourceTree = "<group>"; };
 		7BAC51C719CBAFE100120FA6 /* Timekeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timekeeper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -329,6 +347,7 @@
 		048C1A4819BD603700D2469A = {
 			isa = PBXGroup;
 			children = (
+				7B5F1FFA19CF5D0C005B3175 /* CardGame.xcodeproj */,
 				0433A1F919BE18C1006BFF07 /* libzip */,
 				048C1A5319BD603700D2469A /* CardObjectsProject2 */,
 				048C1A5219BD603700D2469A /* Products */,
@@ -364,6 +383,15 @@
 				048C1A5619BD603700D2469A /* CardObjectsProject2.1 */,
 			);
 			path = CardObjectsProject2;
+			sourceTree = "<group>";
+		};
+		7B5F1FFB19CF5D0C005B3175 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F200019CF5D0D005B3175 /* CardGame.app */,
+				7B5F200219CF5D0D005B3175 /* CardGameTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,12 +433,35 @@
 			mainGroup = 048C1A4819BD603700D2469A;
 			productRefGroup = 048C1A5219BD603700D2469A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7B5F1FFB19CF5D0C005B3175 /* Products */;
+					ProjectRef = 7B5F1FFA19CF5D0C005B3175 /* CardGame.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				048C1A5019BD603700D2469A /* CardObjectsProject2 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7B5F200019CF5D0D005B3175 /* CardGame.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CardGame.app;
+			remoteRef = 7B5F1FFF19CF5D0D005B3175 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B5F200219CF5D0D005B3175 /* CardGameTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CardGameTests.xctest;
+			remoteRef = 7B5F200119CF5D0D005B3175 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		048C1A4D19BD603700D2469A /* Sources */ = {
