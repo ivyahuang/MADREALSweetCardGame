@@ -16,6 +16,15 @@ cg::Question::Question(std::string _question, std::string _explanation, std::vec
     this->answers = _answers;
 }
 
+cg::Question::Question(std::string _question, std::string _explanation, std::vector<std::string> _answers, std::string _correct, std::string _ID)
+{
+    this->question = _question;
+    this->explanation = _explanation;
+    this->correctAnswer = _correct;
+    this->answers = _answers;
+    this->ID = _ID;
+}
+
 cg::Question::~Question() {}
 
 bool cg::Question::checkIsCorrect(std::string inputAnswer)

@@ -139,6 +139,24 @@ public:
         return output;
     }
     
+    std::string getQuestionIDData(struct zip * arch)
+    {
+        std::string output;
+        
+        std::vector<std::string> fnames = this->getFileNamesFromArchive(arch);
+        std::string theFile = "creator_id.txt";
+        
+        for (int  i = 0; i < fnames.size(); i++) {
+            std::string curName = fnames.at(i);
+            std::size_t found = curName.find(theFile);
+            if ((found != std::string::npos) && (curName.find("MACOSX") == std::string::npos)){
+                output = this->getDataForZFile(arch, curName);
+            }
+        }
+        
+        return output;
+    }
+    
 };
 
 
@@ -149,6 +167,8 @@ cg::CardGameZipReader::CardGameZipReader()
     this->explanation = "";
     this->answer = "";
     this->helper = std::shared_ptr<ZipReaderHelper>(new ZipReaderHelper());
+    this->qID = "";
+    this->qname = "";
 }
 
 cg::CardGameZipReader::~CardGameZipReader()
@@ -161,6 +181,13 @@ cg::CardGameZipReader::~CardGameZipReader()
 void cg::CardGameZipReader::getDataFromArchive(std::string path)
 {
     int err = 0;
+    
+    
+    size_t lastSlash = path.rfind("/");
+    size_t zipPoint = path.find(".zip");
+    this->qname = path.substr(lastSlash+1, zipPoint - lastSlash - 1);
+    
+    
     struct zip * arch = zip_open(path.c_str(), 0, &err);
     this->getDataFromArchive(arch);
     zip_close(arch);
@@ -178,6 +205,10 @@ void cg::CardGameZipReader::getDataFromArchive(struct zip *arch)
     
     this->question = this->helper->getQuestionData(arch);
     
+    this->qID = this->helper->getQuestionIDData(arch);
+    
+    this->qID = this->qID + "." + this->qname;
+    
+    
+    
 }
-
-

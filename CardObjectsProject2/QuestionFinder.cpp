@@ -5,6 +5,13 @@
 //  Created by Matt on 9/7/14.
 //  Copyright (c) 2014 Matt Antalek. All rights reserved.
 //
+//
+//  QuestionFinder.cpp
+//  CardObjectsTester
+//
+//  Created by Matt on 9/7/14.
+//  Copyright (c) 2014 Matt Antalek. All rights reserved.
+//
 
 #include "QuestionFinder.h"
 #include "CardGameZipReader.h"
@@ -38,7 +45,7 @@ std::vector<cg::Question *> cg::QuestionFinder::getAllQuestionsFromDirectory(std
                 
                 cgzr->getDataFromArchive(archPath);
                 
-                cg::Question * newQ = new cg::Question(cgzr->question, cgzr->explanation, cgzr->answers, cgzr->answer);
+                cg::Question * newQ = new cg::Question(cgzr->question, cgzr->explanation, cgzr->answers, cgzr->answer, cgzr->qID);
                 
                 output.push_back(newQ);
                 

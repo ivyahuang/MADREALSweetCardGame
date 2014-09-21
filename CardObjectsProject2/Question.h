@@ -16,6 +16,10 @@
 namespace cg {
     class Question {
     public:
+        
+        Question(std::string _question, std::string _explanation, std::vector<std::string> _answers, std::string _correct, std::string _ID);
+        
+        
         Question(std::string _question, std::string _explanation, std::vector<std::string> _answers, std::string _correct);
         ~Question();
         

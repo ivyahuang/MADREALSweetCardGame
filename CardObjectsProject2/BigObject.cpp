@@ -9,7 +9,6 @@
 #include "BigObject.h"
 #include "QuestionFinder.h"
 #include "CardGameZipReader.h"
-#include "Timekeeper.h"
 
 
 
@@ -25,11 +24,6 @@ cg::BigObject::BigObject()
     
     this->questions = questionsFromDir;
     
-    
-    for (int i = 0; i < this->questions.size(); i++) {
-        cg::Question * currentQ = this->questions.at(i);
-        currentQ->setID(std::to_string(i + 1));
-    }
     
     
     //this->questions.push_back(firstQ);
@@ -47,8 +41,6 @@ cg::BigObject::~BigObject()
 void cg::BigObject::run()
 {
     cg::ScoreKeeper * miniscorekeeper = new cg::ScoreKeeper();
-    cg::Timekeeper * minitimekeeper = new cg::Timekeeper();
-    
     while(true){//could be setting ourselves up to run FOREVER
         
         
@@ -56,7 +48,7 @@ void cg::BigObject::run()
         for (int i = 0; i < this->questions.size(); i++) {
             cg::Question * currentQ = this->questions.at(i);
             
-            minitimekeeper->starttime();
+            
             std::cout << currentQ->getQuestion() << std::endl;
             for (int i = 0; i < currentQ->getAnswers().size(); i++) {
                 std::cout << currentQ->getAnswers().at(i) << std::endl;
@@ -68,24 +60,21 @@ void cg::BigObject::run()
             
             std::cin >> answerFromKeyboard;
             
-            
-            
-            
             bool gotItRight = miniscorekeeper-> answerCheck(currentQ, answerFromKeyboard);
-            
-            
             
             //put some of the UI output code in function below
             
             this->handlePostAnswerOutput(currentQ, gotItRight);
-            
-            
-            minitimekeeper->stoptime();
-            std::cout << "You took " << minitimekeeper->getSecondsElapsed() << " seconds to answer the question." << std::endl;
         }
         
         
         std::cout << "You got " << miniscorekeeper->getQuestionsRightIDs().size() << " correct!" << std::endl;
+        
+        std::cout << "Here are the IDs of the questions you got right : " << std::endl;
+        
+        for (int i = 0; i < miniscorekeeper->getQuestionsRightIDs().size(); i++) {
+            std::cout << miniscorekeeper->getQuestionsRightIDs().at(i) << std::endl;
+        }
         
         std::cout << "You got " << miniscorekeeper->getQuestionsWrongIDs().size() << " wrong!" << std::endl;
         
@@ -166,7 +155,6 @@ bool cg::BigObject::handleRetryQuestions(cg::ScoreKeeper *localScoreKeeper)
         
     }
     return Output;
-
+    
     
 }
-

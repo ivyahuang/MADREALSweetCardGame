@@ -25,6 +25,8 @@ namespace cg {
         std::string explanation;
         std::string answer;
         std::vector<std::string> answers;
+        std::string qID;
+        std::string qname;
         
         void getDataFromArchive(std::string path);
         void getDataFromArchive(struct zip * arch);
